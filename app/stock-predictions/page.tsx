@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import { TickerSelector } from "./ticker-selector/ticker-selector";
 import { TickerList } from "./tickers-list/tickers-list";
+import { getTickerInfo } from "./api/getTickerInfo";
 
 export default function Page() {
   return <StockPredictions />;
@@ -13,6 +14,7 @@ const StockPredictions = () => {
   const [tickers, setTickers] = useState<string[]>([]);
 
   const onAddTicker = (ticker: string) => {
+    getTickerInfo(ticker).then(console.log);
     setTickers((prev) => {
       if (prev.includes(ticker)) {
         return prev;

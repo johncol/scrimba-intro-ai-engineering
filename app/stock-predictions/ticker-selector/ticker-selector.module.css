@@ -1,0 +1,14 @@
+.tickerSelector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  input {
+    width: 100%;
+    max-width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+}

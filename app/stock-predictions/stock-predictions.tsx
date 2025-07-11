@@ -45,7 +45,9 @@ export const StockPredictions = ({ onSubmitAction }: StockPredictionsProps) => {
             <input key={ticker} type="hidden" name="tickers" value={ticker} />
           ))}
 
-          <button type="submit">Predict</button>
+          <button className={styles.button} type="submit">
+            Predict
+          </button>
         </div>
       </main>
     </Form>

@@ -13,19 +13,19 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-}
 
-.predictButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
-  &:hover {
-    background-color: #000;
+    &:hover {
+      background-color: #000;
+    }
   }
 }

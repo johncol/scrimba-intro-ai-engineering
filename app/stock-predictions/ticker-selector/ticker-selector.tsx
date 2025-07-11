@@ -24,6 +24,7 @@ export const TickerSelector: React.FC<{
         }}
         onKeyDown={(event) => {
           if (event.key === "Enter") {
+            event.preventDefault();
             onAddTicker(ticker);
             setTicker("");
           }

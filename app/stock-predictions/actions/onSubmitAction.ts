@@ -1,7 +1,11 @@
 "use server";
 
-import { getTickerInfo } from "../api/getTickerInfo";
-import { TickerResult } from "../types";
+import {
+  getAwesomeFinancialAdvice,
+  TickerInfo,
+} from "../api/getAwesomeFinancialAdvice";
+
+import { getTickerQuote } from "../getTickerQuote";
 
 export const onSubmitAction = async (formData: FormData): Promise<void> => {
   const tickers = formData.getAll("tickers") as string[];
@@ -11,18 +15,17 @@ export const onSubmitAction = async (formData: FormData): Promise<void> => {
   }
 
   try {
-    const results: TickerResult[] = await Promise.all(
+    const tickersInfo: TickerInfo[] = await Promise.all(
       tickers.map(async (ticker) => {
-        const info = await getTickerInfo(ticker);
-        return {
-          ticker,
-          info: info?.results || null,
-          success: !!info,
-        };
+        const quote = await getTickerQuote(ticker);
+        return { ticker, quote };
       })
     );
+    console.log("Tickers info:", tickersInfo);
+    
+    const prediction = await getAwesomeFinancialAdvice(tickersInfo);
 
-    console.log("Processed tickers:", results);
+    console.log("Tickers prediction:", prediction);
   } catch (error) {
     console.error("Error processing tickers:", error);
   }

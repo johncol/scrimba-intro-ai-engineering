@@ -7,6 +7,8 @@ import { TickerSelector } from "./ticker-selector/ticker-selector";
 import { TickerList } from "./tickers-list/tickers-list";
 import Form from "next/form";
 
+const MAX_TICKERS = 3;
+
 interface StockPredictionsProps {
   onSubmitAction: (formData: FormData) => Promise<string>;
 }
@@ -46,7 +48,7 @@ export const StockPredictions = ({ onSubmitAction }: StockPredictionsProps) => {
             but don&apos;t blame me afterwards.
           </p>
 
-          <TickerSelector onAddTicker={onAddTicker} />
+          <TickerSelector onAddTicker={onAddTicker} disabled={tickers.length >= MAX_TICKERS} />
           <TickerList tickers={tickers} onRemoveTicker={onRemoveTicker} />
           {tickers.map((ticker) => (
             <input key={ticker} type="hidden" name="tickers" value={ticker} />

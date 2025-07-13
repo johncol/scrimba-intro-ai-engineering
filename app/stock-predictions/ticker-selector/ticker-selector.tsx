@@ -5,7 +5,8 @@ const MAX_LENGTH = 5;
 
 export const TickerSelector: React.FC<{
   onAddTicker: (ticker: string) => void;
-}> = ({ onAddTicker }) => {
+  disabled?: boolean;
+}> = ({ onAddTicker, disabled }) => {
   const [ticker, setTicker] = useState("");
 
   return (
@@ -16,6 +17,8 @@ export const TickerSelector: React.FC<{
         id="ticker"
         list="tickers"
         value={ticker}
+        disabled={disabled}
+        placeholder={disabled ? "Max tickers reached" : "Enter ticker"}
         onChange={(event) => {
           const value = event.target.value
             ?.toUpperCase()

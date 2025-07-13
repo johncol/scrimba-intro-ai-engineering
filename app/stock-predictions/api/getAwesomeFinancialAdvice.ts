@@ -32,9 +32,13 @@ export type TickerInfo = {
 export const getAwesomeFinancialAdvice = async (tickersInfo: TickerInfo[]) => {
   const response = await openai.responses.create({
     model: "gpt-3.5-turbo",
+    temperature: 0.7,
+    max_output_tokens: 120,
     instructions: INSTRUCTIONS,
     input: JSON.stringify(tickersInfo),
   });
+
+  console.log("openai usage in this request", response.usage);
 
   return response.output_text;
 };

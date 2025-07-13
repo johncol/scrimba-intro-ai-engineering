@@ -9,7 +9,7 @@ export const TickerList: React.FC<{
       {tickers.map((ticker) => (
         <li key={ticker}>
           {ticker}
-          <button onClick={() => onRemoveTicker(ticker)} aria-label="Remove">
+          <button type="button" onClick={() => onRemoveTicker(ticker)} aria-label="Remove">
             ✕
           </button>
         </li>

@@ -7,11 +7,11 @@ import {
 
 import { getTickerQuote } from "../getTickerQuote";
 
-export const onSubmitAction = async (formData: FormData): Promise<void> => {
+export const onSubmitAction = async (formData: FormData): Promise<string> => {
   const tickers = formData.getAll("tickers") as string[];
 
   if (tickers.length === 0) {
-    return;
+    return "No tickers provided";
   }
 
   try {
@@ -26,7 +26,9 @@ export const onSubmitAction = async (formData: FormData): Promise<void> => {
     const prediction = await getAwesomeFinancialAdvice(tickersInfo);
 
     console.log("Tickers prediction:", prediction);
+    return prediction;
   } catch (error) {
     console.error("Error processing tickers:", error);
+    return "Error processing tickers";
   }
 };

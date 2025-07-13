@@ -5,7 +5,7 @@ import {
   TickerInfo,
 } from "../api/getAwesomeFinancialAdvice";
 
-import { getTickerQuote } from "../getTickerQuote";
+import { getTickerQuote } from "../api/getTickerQuote";
 
 export const onSubmitAction = async (formData: FormData): Promise<string> => {
   const tickers = formData.getAll("tickers") as string[];

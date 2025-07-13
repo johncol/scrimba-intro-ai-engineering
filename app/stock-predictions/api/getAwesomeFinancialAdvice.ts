@@ -1,5 +1,5 @@
 import { OpenAI } from "openai";
-import { TickerQuote } from "../getTickerQuote";
+import { TickerQuote } from "./getTickerQuote";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY_PERSONAL,

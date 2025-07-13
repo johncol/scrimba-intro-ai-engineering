@@ -1,6 +1,6 @@
-const API = "api/v1/quote";
-const BASE_URL = process.env.FINNHUB_BASE_URL;
 const API_KEY = process.env.FINNHUB_API_KEY;
+const BASE_URL = process.env.FINNHUB_BASE_URL;
+const API = "api/v1/quote";
 
 export type TickerQuote = {
   c: number;
@@ -14,7 +14,6 @@ export const getTickerQuote = async (
   ticker: string
 ): Promise<TickerQuote | undefined> => {
   const url = `${BASE_URL}/${API}?symbol=${ticker}&token=${API_KEY}`;
-  console.log("url", url);
 
   const response = await fetch(url);
   if (!response.ok) {

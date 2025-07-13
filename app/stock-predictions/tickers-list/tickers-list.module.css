@@ -3,32 +3,42 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
+  gap: 10px;
+}
+
+.tickersList li {
+  list-style: none;
+  background: #be66f1;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 4px 8px 16px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
   gap: 8px;
+  box-shadow: 0 2px 8px rgba(190, 102, 241, 0.10);
+  transition: box-shadow 0.2s;
+}
 
-  li {
-    list-style: none;
+.tickersList li:hover {
+  box-shadow: 0 4px 16px rgba(190, 102, 241, 0.18);
+}
 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px 4px 4px 8px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #333;
+.tickersList button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    gap: 4px;
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      color: #333;
-
-      &:hover {
-        color: #e73c3c;
-      }
-    }
+  &:hover {
+    font-weight: 600;
   }
 }

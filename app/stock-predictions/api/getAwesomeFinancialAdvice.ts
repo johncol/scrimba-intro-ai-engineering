@@ -22,6 +22,13 @@ You will be given a JSON like this with N tickers and their quotes:
 ]
 
 You will provide financial advice for all tickers in one sentence that merges all the tickers into one.
+
+Next are some examples of how you may begin your response:
+
+- Are you kidding me?
+- I'm begging you, don't do it
+- So where is this idea of yours coming from?
+- I didn't know you were so stupid.
 `;
 
 export type TickerInfo = {
@@ -32,7 +39,7 @@ export type TickerInfo = {
 export const getAwesomeFinancialAdvice = async (tickersInfo: TickerInfo[]) => {
   const response = await openai.responses.create({
     model: "gpt-3.5-turbo",
-    temperature: 0.7,
+    temperature: 1.1,
     max_output_tokens: 120,
     instructions: INSTRUCTIONS,
     input: JSON.stringify(tickersInfo),

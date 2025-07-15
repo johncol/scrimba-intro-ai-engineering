@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech XP using Hugging Face</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 20px;
+        color: #333;
+        font-size: 16px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        max-width: 800px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: inherit;
+        font-size: inherit;
+        width: 100%;
+      }
+
+      button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        color: inherit;
+        font-size: inherit;
+        display: flex;
+        gap: 10px;
+
+        .loading-indicator {
+          display: none;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #ccc;
+          border-top: 2px solid #000;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        &.loading-audio {
+          .loading-indicator {
+            display: block;
+          }
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .error-section {
+        width: 100%;
+        display: none;
+        background-color: #ffeeee;
+        padding: 15px;
+        border-radius: 5px;
+
+        > * {
+          margin: 0;
+          font-weight: 400;
+          font-size: 14px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+
+        &.visible {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Text to Speech XP using Hugging Face</h1>
+      <form>
+        <label for="text-input">Enter text to convert to speech</label>
+        <input
+          type="text"
+          id="text-input"
+          placeholder="e.g. Welcome to the world of AI"
+          value="Welcome to the world of AI"
+          minlength="10"
+          required
+        />
+        <button type="submit">
+          Convert to Speech
+          <span class="loading-indicator"></span>
+        </button>
+        <section class="error-section">
+          <h4>There was an error</h4>
+          <p></p>
+        </section>
+      </form>
+      <audio controls></audio>
+    </main>
+    <script type="module" src="text-to-speech.mjs"></script>
+  </body>
+</html>

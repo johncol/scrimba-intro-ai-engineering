@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scrimba Intro to AI Engineering
 
-## Getting Started
+A collection of AI engineering experiments and a Next.js application demonstrating various AI/ML concepts and implementations.
 
-First, run the development server:
+## 🚀 Main Application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The repository includes a **Next.js 15** application with a stock prediction feature:
+
+- **Stock Predictions App** (`/app/stock-predictions/`): An interactive web application that uses AI to predict stock prices
+  - Allows users to select up to 3 stock tickers
+  - Integrates with financial APIs for real-time data
+  - Provides AI-powered predictions (with a humorous disclaimer about reliability)
+  - Built with React Server Components and modern Next.js patterns
+
+## 🧪 AI Experiments
+
+This repository serves as a learning playground for various AI/ML technologies and concepts:
+
+### 🤖 OpenAI Experiments (`/experiments-openai/`)
+- **Designing Good Prompts**: Examples of structured prompts using markdown and XML formatting
+- **Image Generation**: DALL-E integration for AI image creation
+- **Moderations API**: Content filtering and safety checks
+- **Chain of Thought**: Advanced reasoning with JSON schema output
+- **Pre-defined Prompts**: Template-based prompt engineering
+
+### 🤗 Hugging Face Experiments (`/experiments-hugging-face/`)
+- **Text Classification**: Sentiment analysis and content categorization
+- **Text Translation**: Multi-language translation capabilities
+- **Text-to-Speech**: Audio generation from text input
+- **Basic Chat Completion**: Simple conversational AI interactions
+
+### 🔍 Embeddings & Vector Search (`/experiments-embeddings/`)
+- **Content Embedding**: Converting text to vector representations
+- **Similarity Search**: Finding semantically similar content
+- **Natural Language Responses**: Generating contextual answers
+- **Supabase Integration**: Vector database storage and retrieval
+
+### 📚 RAG (Retrieval-Augmented Generation) (`/experiment-RAG/`)
+- **Document Chunking**: Breaking large documents into searchable pieces
+- **Semantic Search**: Finding relevant document sections
+- **Contextual Responses**: Generating answers based on retrieved content
+- **Express.js Server**: RESTful API for RAG operations
+
+### 🦙 Ollama Experiments (`/experiments-ollama/`)
+- **Local LLM Integration**: Running open-source models locally
+- **Express.js Web Interface**: Simple web UI for querying local models
+- **Mistral Model**: Using the Mistral language model for chat completions
+
+## 🛠️ Technology Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **AI/ML**: OpenAI API, Hugging Face Inference, Supabase Vector DB
+- **Local AI**: Ollama for local model inference
+- **Styling**: CSS Modules for component-specific styling
+- **Development**: ESLint, TypeScript configuration
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd scrimba-intro-ai-engineering
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file with your API keys:
+   ```
+   OPENAI_API_KEY=your_openai_key
+   HUGGINGFACE_API_KEY=your_huggingface_key
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_ANON_KEY=your_supabase_key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Explore the experiments**
+   - Main app: `http://localhost:3000`
+   - Stock predictions: `http://localhost:3000/stock-predictions`
+   - Ollama server: `http://localhost:3000` (in experiments-ollama directory)
+
+## 📁 Project Structure
+
+```
+├── app/                          # Next.js main application
+│   ├── stock-predictions/        # Stock prediction feature
+│   └── page.tsx                  # Homepage
+├── experiments-openai/           # OpenAI API experiments
+├── experiments-hugging-face/     # Hugging Face experiments
+├── experiments-embeddings/       # Vector embeddings & search
+├── experiment-RAG/               # RAG implementation
+├── experiments-ollama/           # Local LLM experiments
+└── public/                       # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Learning Objectives
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This repository demonstrates:
+- **Prompt Engineering**: Best practices for AI model interactions
+- **Vector Databases**: Semantic search and similarity matching
+- **RAG Systems**: Building context-aware AI applications
+- **Local AI**: Running models without cloud dependencies
+- **API Integration**: Working with multiple AI service providers
+- **Modern Web Development**: Next.js, React, and TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+Feel free to explore the experiments, modify the code, and add your own AI engineering experiments. Each directory is self-contained and can be run independently.
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is for educational purposes. Please ensure you comply with the terms of service for any AI APIs you use.

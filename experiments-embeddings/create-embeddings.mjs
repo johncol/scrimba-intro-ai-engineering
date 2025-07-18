@@ -19,6 +19,13 @@ export const createEmbeddings = async (content = [], debug = false) => {
     });
   }
 
+  if (typeof content === 'string') {
+    return [{
+      content,
+      embedding: data[0].embedding,
+    }]
+  }
+
   return data.map(({ index, embedding }) => {
     return {
       content: content[index],

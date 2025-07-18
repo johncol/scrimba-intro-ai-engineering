@@ -2,7 +2,7 @@
 
 A collection of AI engineering experiments and a Next.js application demonstrating various AI/ML concepts and implementations.
 
-## 🚀 Main Application
+## Main Application
 
 The repository includes a **Next.js 15** application with a stock prediction feature:
 
@@ -12,41 +12,41 @@ The repository includes a **Next.js 15** application with a stock prediction fea
   - Provides AI-powered predictions (with a humorous disclaimer about reliability)
   - Built with React Server Components and modern Next.js patterns
 
-## 🧪 AI Experiments
+## AI Experiments
 
 This repository serves as a learning playground for various AI/ML technologies and concepts:
 
-### 🤖 OpenAI Experiments (`/experiments-openai/`)
+### OpenAI Experiments (`/experiments-openai/`)
 - **Designing Good Prompts**: Examples of structured prompts using markdown and XML formatting
 - **Image Generation**: DALL-E integration for AI image creation
 - **Moderations API**: Content filtering and safety checks
 - **Chain of Thought**: Advanced reasoning with JSON schema output
 - **Pre-defined Prompts**: Template-based prompt engineering
 
-### 🤗 Hugging Face Experiments (`/experiments-hugging-face/`)
+### Hugging Face Experiments (`/experiments-hugging-face/`)
 - **Text Classification**: Sentiment analysis and content categorization
 - **Text Translation**: Multi-language translation capabilities
 - **Text-to-Speech**: Audio generation from text input
 - **Basic Chat Completion**: Simple conversational AI interactions
 
-### 🔍 Embeddings & Vector Search (`/experiments-embeddings/`)
+### Embeddings & Vector Search (`/experiments-embeddings/`)
 - **Content Embedding**: Converting text to vector representations
 - **Similarity Search**: Finding semantically similar content
 - **Natural Language Responses**: Generating contextual answers
 - **Supabase Integration**: Vector database storage and retrieval
 
-### 📚 RAG (Retrieval-Augmented Generation) (`/experiment-RAG/`)
+### RAG (Retrieval-Augmented Generation) (`/experiment-RAG/`)
 - **Document Chunking**: Breaking large documents into searchable pieces
 - **Semantic Search**: Finding relevant document sections
 - **Contextual Responses**: Generating answers based on retrieved content
 - **Express.js Server**: RESTful API for RAG operations
 
-### 🦙 Ollama Experiments (`/experiments-ollama/`)
+### Ollama Experiments (`/experiments-ollama/`)
 - **Local LLM Integration**: Running open-source models locally
 - **Express.js Web Interface**: Simple web UI for querying local models
 - **Mistral Model**: Using the Mistral language model for chat completions
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **AI/ML**: OpenAI API, Hugging Face Inference, Supabase Vector DB
@@ -54,7 +54,7 @@ This repository serves as a learning playground for various AI/ML technologies a
 - **Styling**: CSS Modules for component-specific styling
 - **Development**: ESLint, TypeScript configuration
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
    ```bash
@@ -86,7 +86,7 @@ This repository serves as a learning playground for various AI/ML technologies a
    - Stock predictions: `http://localhost:3000/stock-predictions`
    - Ollama server: `http://localhost:3000` (in experiments-ollama directory)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── app/                          # Next.js main application
@@ -100,7 +100,7 @@ This repository serves as a learning playground for various AI/ML technologies a
 └── public/                       # Static assets
 ```
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 This repository demonstrates:
 - **Prompt Engineering**: Best practices for AI model interactions
@@ -110,10 +110,10 @@ This repository demonstrates:
 - **API Integration**: Working with multiple AI service providers
 - **Modern Web Development**: Next.js, React, and TypeScript
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to explore the experiments, modify the code, and add your own AI engineering experiments. Each directory is self-contained and can be run independently.
 
-## 📝 License
+## License
 
 This project is for educational purposes. Please ensure you comply with the terms of service for any AI APIs you use.

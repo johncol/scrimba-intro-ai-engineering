@@ -5,7 +5,7 @@ const supabaseKey = process.env.SUPABASE_KEY
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export const findSimilarEmbeddings = async (query, threshold = 0.5, count = 3) => {
+export const findMatchingEmbeddings = async (query, threshold = 0.5, count = 3) => {
   const { data, error } = await supabase.rpc("match_documents", {
     query_embedding: query,
     match_threshold: threshold,

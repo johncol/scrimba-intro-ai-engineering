@@ -1,7 +1,6 @@
 export const getCurrentWeather = async ({ latitude, longitude }) => {
   try {
-    const API_KEY =
-      process.env.OPENWEATHER_API_KEY || "b02a86c877e003a669f1cdb28e746684";
+    const API_KEY = process.env.OPENWEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
 
     const response = await fetch(url);
@@ -12,7 +11,7 @@ export const getCurrentWeather = async ({ latitude, longitude }) => {
 
     return await response.json();
   } catch (error) {
-    console.log(`Error invoking getCurrentWeather. Error: ${error.message}`)
+    console.log(`Error invoking getCurrentWeather. Error: ${error.message}`);
     throw error;
   }
 };
@@ -49,7 +48,7 @@ export const getLocation = async () => {
 
     return location;
   } catch (error) {
-    console.log(`Error invoking getLocation. Error: ${error.message}`)
+    console.log(`Error invoking getLocation. Error: ${error.message}`);
     throw error;
   }
 };
